@@ -244,8 +244,21 @@ for (let i = 1; i < finances.length; i++) {
         dateDecrease = finances[i][0]; 
 
         // debug else only
-        console.log(dateDecrease)
-        console.log(greatestDecrease)
+        // console.log(dateDecrease)
+        // console.log(greatestDecrease)
     }
 }
 
+// The final console log output 
+
+console.log(`
+Financial Analysis
+-------------------
+
+Total Months: ${totalMonths}
+Total: $${netTotal}
+Average Change: $${averageChange}
+Greatest Increase: ${date} $${greatestIncrease}
+Greatest Decrease: ${dateDecrease} $${greatestDecrease}
+
+`)
