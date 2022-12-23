@@ -126,7 +126,15 @@ let finances = [
     ];
 
 
+// 1. Total number of months
 
+// store total
+let totalMonths = 0;
+// iterate through the length of entries
+for (let i = 0; i < finances.length; i++) {
+    // adding 1 to count each loop
+    totalMonths++;
+}
 
 
 
