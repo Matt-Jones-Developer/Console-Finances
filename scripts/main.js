@@ -180,3 +180,44 @@ for (let i = 0; i < changes.length; i++) {
 
 // log friendly - correct decimals using toFixed
 let averageChange = average.toFixed(2)
+
+
+// 4. find the largest increase in profits (date and amount)
+
+// current largest increase (month 1)
+let greatestIncrease = finances[1][1] - finances[0][1];
+// add a date variable - starting at month 2 (current)
+let date = finances[1][0];
+
+
+// iterate through finances
+// ignore first entry
+for (let i = 1; i < finances.length; i++) {
+                    // current   -   // previous
+    // store current - previous 
+    let e = finances[i][1] - finances[i-1][1];
+    // IF greatestIncrease > (finances[i][1] - finances[i-1][1] 
+    if (greatestIncrease > e) {
+        // set greatestIncrease = greatestIncrease
+        greatestIncrease = greatestIncrease;
+        // debug
+        // console.log(greatestIncrease)
+    }
+    else {
+        // add the new value from e
+        greatestIncrease = e;
+        // find the date the value relates to (current, not previous)
+        // finances index + 1 ?
+        date = finances[i][0];
+
+        // debug else only - proves my code works and will not add a value lower than current high
+        // console.log(date)
+        // console.log(greatestIncrease)
+    }
+}
+
+// console.log(date)
+// console.log(greatestIncrease)
+// console.log(`Greatest Increase: ${date} $${greatestIncrease}`)
+
+
