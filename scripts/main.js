@@ -166,3 +166,17 @@ for (let i = 1; i < finances.length; i++) {
     changes.push(e);
 }
 
+// 3B:
+
+// store average 
+let average = 0;
+// iterate through each change
+for (let i = 0; i < changes.length; i++) {
+    // add the change to average
+    average += changes[i] /85;
+}
+// log average 
+// console.log(average)
+
+// log friendly - correct decimals using toFixed
+let averageChange = average.toFixed(2)
