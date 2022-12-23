@@ -132,10 +132,19 @@ let finances = [
 let totalMonths = 0;
 // iterate through the length of entries
 for (let i = 0; i < finances.length; i++) {
-    // adding 1 to count each loop
+    // adding 1 to count for each loop
     totalMonths++;
 }
 
 
+// 2. Net Total over period
+
+// store net
+let netTotal = 0
+// iterate through the length of entries
+for (let i = 0; i < finances.length; i++) {
+    // add each indexed value to netTotal
+    netTotal += finances[i][1];
+}
 
 
