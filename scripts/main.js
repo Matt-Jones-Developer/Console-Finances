@@ -147,4 +147,22 @@ for (let i = 0; i < finances.length; i++) {
     netTotal += finances[i][1];
 }
 
+// 3. average of the changes over period
+
+// A: find the 'changes' between each month (x85)
+// B: find the averageChange figure from 'changes' total
+
+
+// 3A:
+// store changes
+let changes = []
+
+// start from 1, since ~Jan2010 has no previous
+// loop through 85 times (1, not 0)
+for (let i = 1; i < finances.length; i++) {
+    // var (e) = currentMonth - previousMonth
+    const e = finances[i][1] - finances[i-1][1];
+    // push result to new array
+    changes.push(e);
+}
 
