@@ -24,13 +24,13 @@ Greatest Increase in Profits: Feb-2012 $1926159
 Greatest Decrease in Profits: Sep-2013 $-2196167
 
 The confusing 'recalculation' example we were slacked completely confused me 
-resulting in thousands of lines of unused code (see drafting.js) I still do not understand why it was created and offered up?
+resulting in thousands of lines of unused code (see drafting.js) I still do not understand why it was created and offered up.
 
 This challenge was the most infuriating - mainly because of the mis-information in answers my code was trying to reach.
-I hope that you can see that my answers meet the initial criteria guideline as per the documentation.
+I feel my answers meet the initial criteria guideline as per the documentation.
 
 group attribution:
-I worked on question 3 during session time with Ana Awada and Connie.  
+I worked on question 3 during session time with Ana and Connie.  
 
 */
 
@@ -216,8 +216,36 @@ for (let i = 1; i < finances.length; i++) {
     }
 }
 
-// console.log(date)
-// console.log(greatestIncrease)
-// console.log(`Greatest Increase: ${date} $${greatestIncrease}`)
+// 5. calculate the greatest DECREASE 
 
+// the largest decrease (month 1)
+let greatestDecrease = finances[1][1] - finances[0][1];
+// add a date - starting at month 2
+let dateDecrease = finances[1][0];
+
+
+// iterate through finances array
+// ignore first entry
+for (let i = 1; i < finances.length; i++) {
+                    // current   -   // previous
+    let e = finances[i][1] - finances[i-1][1];
+    // IF greatestDecrease < (finances[i][1] - finances[i-1][1] 
+    if (greatestDecrease < e) {
+        // set greatestDecrease = greatestDecrease
+        greatestDecrease = greatestDecrease;
+
+        // debug
+        // console.log(greatestDecrease)
+
+    }
+    else {
+        greatestDecrease = e;
+        // find the date the value relates to (current, not previous)
+        dateDecrease = finances[i][0]; 
+
+        // debug else only
+        console.log(dateDecrease)
+        console.log(greatestDecrease)
+    }
+}
 
