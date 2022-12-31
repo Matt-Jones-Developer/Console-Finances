@@ -192,7 +192,7 @@ Project Link: [https://github.com/Matt-Jones-Developer/Console-Finances](https:/
 [license-url]: https://github.com/Matt-Jones-Developer/Console-Finances/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/matt-jones-zx81
-[product-screenshot]: ./images/screenshot.png
+[product-screenshot]: images/screenshot.png
 [console-output-screenshot]: images/console_output_screenshot.png
 [javascript-url]: https://www.javascript.com
 
