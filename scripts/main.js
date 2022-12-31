@@ -1,40 +1,12 @@
 /*
+Working with arrays - writing a program that outputs financial data
+as set in the acceptance criteria.
 
-Acceptance Criteria:
-
-1. The total number of months included in the dataset.
-
-2. The net total amount of Profit/Losses over the entire period.
-
-3. The average of the changes in Profit/Losses over the entire period.
-
-4. The greatest increase in profits (date and amount) over the entire period.
-
-5. The greatest decrease in losses (date and amount) over the entire period.
-
----
-My console output must look like this:
-
-Financial Analysis
-----------------------------
-Total Months: 86
-Total: $38382578 
-Average  Change: $-2315.12
-Greatest Increase in Profits: Feb-2012 $1926159
-Greatest Decrease in Profits: Sep-2013 $-2196167
-
-The confusing 'recalculation' example we were slacked completely confused me 
-resulting in thousands of lines of unused code (see drafting.js) I still do not understand why it was created and offered up.
-
-This challenge was the most infuriating - mainly because of the mis-information in answers my code was trying to reach.
-I feel my answers meet the initial criteria guideline as per the documentation.
-
-group attribution:
-I worked on question 3 during session time with Ana and Connie.  
-
+Please note; my solution corresponds to the initial criteria output, 
+not the revised (confused?) one.
 */
 
-// the dataset
+// the finances dataset (multi-dimensional array)
 
 let finances = [
     ['Jan-2010', 867884],
@@ -149,16 +121,11 @@ for (let i = 0; i < finances.length; i++) {
 
 // 3. average of the changes over period
 
-// A: find the 'changes' between each month (x85)
-// B: find the averageChange figure from 'changes' total
 
-
-// 3A:
-// store changes
+// 3A: find the 'changes' between each month (x85)
 let changes = []
 
 // start from 1, since ~Jan2010 has no previous
-// loop through 85 times (1, not 0)
 for (let i = 1; i < finances.length; i++) {
     // var (e) = currentMonth - previousMonth
     const e = finances[i][1] - finances[i-1][1];
@@ -166,18 +133,17 @@ for (let i = 1; i < finances.length; i++) {
     changes.push(e);
 }
 
-// 3B:
+// 3B: find the averageChange figure from 'changes' total
 
 // store average 
 let average = 0;
 // iterate through each change
 for (let i = 0; i < changes.length; i++) {
-    // add the change to average
+    // add the change to average /85
     average += changes[i] /85;
 }
 // log average 
 // console.log(average)
-
 // log friendly - correct decimals using toFixed
 let averageChange = average.toFixed(2)
 
@@ -206,11 +172,10 @@ for (let i = 1; i < finances.length; i++) {
     else {
         // add the new value from e
         greatestIncrease = e;
-        // find the date the value relates to (current, not previous)
-        // finances index + 1 ?
+        // add corresponding date index
         date = finances[i][0];
 
-        // debug else only - proves my code works and will not add a value lower than current high
+        // debug else only - proves my code works and will not add a value lower than current high i.e Nov-2016
         // console.log(date)
         // console.log(greatestIncrease)
     }
@@ -225,7 +190,6 @@ let dateDecrease = finances[1][0];
 
 
 // iterate through finances array
-// ignore first entry
 for (let i = 1; i < finances.length; i++) {
                     // current   -   // previous
     let e = finances[i][1] - finances[i-1][1];
@@ -234,22 +198,16 @@ for (let i = 1; i < finances.length; i++) {
         // set greatestDecrease = greatestDecrease
         greatestDecrease = greatestDecrease;
 
-        // debug
-        // console.log(greatestDecrease)
-
-    }
-    else {
+    } else {
+        // set new greatestDecrease
         greatestDecrease = e;
-        // find the date the value relates to (current, not previous)
+        // find the date
         dateDecrease = finances[i][0]; 
 
-        // debug else only
-        // console.log(dateDecrease)
-        // console.log(greatestDecrease)
     }
 }
 
-// The final console log output 
+// interpolated console log output 
 
 console.log(`
 Financial Analysis

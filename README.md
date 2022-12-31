@@ -31,7 +31,7 @@
 <h2 align="center">Console-Finances assignment: written in vanilla JavaScript</h2>
 
   <p align="center">
-    Calculating the total months, NET total, average change in PnL, and largest increase and decrease in profits over a financial period.
+    Multi-dimensional arrays, iteration, .length, .push, .toFixed() and interpolated output.
     <br />
     <a href="https://github.com/Matt-Jones-Developer/Console-Finances/"><strong>Explore the docs »</strong></a>
     <br />
@@ -78,6 +78,7 @@
 
 [![Console Finances Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/Console-Finances)
 
+
 I was asked to write a program that could generate a financial report within the console, using vanilla JS.
 
 The output demonstrates that my code met the following criteria:
@@ -90,12 +91,12 @@ The output demonstrates that my code met the following criteria:
 - [ ] Calculate and display the month with the biggest increase in profits [DONE]
 - [ ] Calculate and display the month with the biggest loss in profits [DONE]
 
-I found the project both challenging and confusing, since we were given an alternative set of answers that I thought were the 'correct' ones; in the end my answers matched the ones from the original project brief.
+I found the project (initially) both challenging and confusing, since we were given an alternative set of answers that I thought were the 'correct' ones; in the end my answers matched the ones from the original project brief.  I felt like I had to teach myself JavaScript before I could even write any code.  A lot of what was required was not previously taught, but I get why that was an advantage to improve my problem solving skills and my Google searching skills to seek out and test new syntax and ideas for myself - which really bumped up my game and made me feel pretty confident.
 
 As a complete beginner to JS, I utilized Google a lot, experimented with new ideas and syntax (I must have a draft with over 1000 lines of code, trying to work out how to solve each issue!) - most times I was over-thinking and over complicating them, but I was proud to solve the problems finally, with some cleanly written, fairly concise Javascript!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Built With
