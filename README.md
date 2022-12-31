@@ -76,7 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Matt-Jones-Developer/Console-Finances)
+[![product-screenshot]](https://github.com/Matt-Jones-Developer/Console-Finances)
 
 
 I was asked to write a program that could generate a financial report within the console, using vanilla JS.
